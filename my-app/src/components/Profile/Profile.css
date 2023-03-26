@@ -1,0 +1,146 @@
+.profile {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.profile__form {
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__container {
+  display: flex;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 220px;
+}
+
+.profile__hello {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29.05px;
+  margin-top: 74px;
+  margin-bottom: 123px;
+  color: #000;
+}
+
+.profile__text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.31px;
+  margin-top: 0;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-style: none;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.profile__text_email {
+  border: none;
+}
+
+.profile__input {
+  padding: 16px 0;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.18;
+  background-color: transparent;
+  color: #000;
+  text-align: right;
+  border: none;
+  flex-grow: 0.8;
+  outline: none;
+}
+
+.profile__error-name {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #ee3465;
+}
+
+.profile__button {
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.8s linear;
+}
+
+.profile__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.8s linear;
+}
+
+.profile__button_disabled:hover {
+  cursor: default;
+}
+
+.profile__text_placeholder {
+  font-weight: 500;
+}
+
+.profile__container_name {
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.profile__footer {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+  margin: 0;
+}
+
+.profile__footer_out {
+  color: #EE3465;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .profile__hello {
+    margin-top: 236px;
+    margin-bottom: 96px;
+  }
+
+  .profile__container {
+    margin-bottom: 210px;
+  }
+}
+
+@media (max-width: 518px) {
+  .profile__container {
+    margin-bottom: 379px;
+  }
+
+  .profile__form {
+    max-width: 260px;
+    min-height: 500px;
+  }
+
+  .profile__footer {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .profile__hello {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+}
