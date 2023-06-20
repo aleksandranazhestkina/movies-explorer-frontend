@@ -35,7 +35,7 @@ export default function Login(props) {
           minLength="2"
           maxLength="30"
           value={values.email || ""}
-          pattern={EMAIL_PATTERN}
+          // pattern={EMAIL_PATTERN}
           required
           onChange={handleChange}
         />

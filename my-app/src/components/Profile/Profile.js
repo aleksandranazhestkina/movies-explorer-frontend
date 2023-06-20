@@ -70,7 +70,7 @@ export default function Profile(props) {
                 className="profile__input"
                 type="email"
                 value={values.email || ""}
-                pattern={EMAIL_PATTERN}
+                // pattern={EMAIL_PATTERN}
                 required
                 onChange={handleChange}
               />

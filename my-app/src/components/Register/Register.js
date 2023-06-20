@@ -37,7 +37,7 @@ export default function Register(props) {
           minLength="2"
           maxLength="30"
           value={values.name || ""}
-          pattern={USER_NAME_PATTERN}
+          // pattern={USER_NAME_PATTERN}
           required
           onChange={handleChange}
         />
