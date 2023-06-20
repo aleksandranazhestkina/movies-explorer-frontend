@@ -38,15 +38,16 @@
   line-height: 1.2;
   letter-spacing: -0.04em;
   margin: 0;
+  padding: 0;
 }
 
 .about-project__information-description {
+  margin-top: 26px;
+  margin-bottom: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.43;
-  margin-top: 26px;
-  margin-bottom: 0;
 }
 
 .about-project__time {

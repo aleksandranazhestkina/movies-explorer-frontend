@@ -34,6 +34,11 @@
 .movies-cards__else:hover {
   opacity: 0.7;
 }
+ 
+.movies-cards__else_off{
+  display: none;
+}
+
 
 @media screen and (max-width: 1270px) {
   .movies-cards__list {
@@ -41,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 997px) {
+@media screen and (max-width: 990px) {
   .movies-cards__list {
     row-gap: 30px;
     grid-template-columns: repeat(2, 339px);
@@ -65,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 583px) {
+@media screen and (max-width: 600px) {
   .movies-cards {
     grid-auto-rows: 260px;
     row-gap: 34px;

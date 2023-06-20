@@ -47,7 +47,7 @@
   height: 100%;
   z-index: 10;
   position: fixed;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .preloader__container {
@@ -56,7 +56,7 @@
   position: relative;
 }
 
-.preloader__round {
+.preloader__img {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -66,8 +66,8 @@
   border-radius: 50px;
 }
 
-.preloader__round::after,
-.preloader__round::before {
+.preloader__img::after,
+.preloader__img::before {
   content: '';
   width: 100px;
   height: 100px;
@@ -77,12 +77,12 @@
   border-radius: 50px;
 }
 
-.preloader__round::after {
+.preloader__img::after {
   background: #fff;
   animation: preloader-inside-white 1s ease-in-out infinite;
 }
 
-.preloader__round::before {
+.preloader__img::before {
   z-index: 10;
   background: #3456F3;
   animation: preloader-inside-red 1s ease-in-out infinite;

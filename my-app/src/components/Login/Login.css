@@ -130,7 +130,7 @@
   opacity: 1;
 }
 
-.login__support {
+.login__subtitle {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -166,7 +166,7 @@
     line-height: 1.25;
   }
 
-  .login__support {
+  .login__subtitle {
     font-size: 12px;
     line-height: 1.25;
   }

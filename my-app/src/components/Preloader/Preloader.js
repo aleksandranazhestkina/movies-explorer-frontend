@@ -1,12 +1,12 @@
 import './Preloader.css';
 
-export default function Preloader({ isOpen }) {
+export default function Preloader(props) {
   return (
     <>
-      {isOpen && (
+      {props.isOpen && (
         <div className="preloader">
           <div className="preloader__container">
-            <span className="preloader__round"></span>
+            <span className="preloader__img"></span>
           </div>
         </div>
       )}

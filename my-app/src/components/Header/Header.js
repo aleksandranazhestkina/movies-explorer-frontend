@@ -1,24 +1,23 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from 'react';
 import "./Header.css";
 import logo from "../../images/logo.svg";
 import logoAcc from "../../images/icon__COLOR_icon-main.svg";
 import burger from "../../images/burger.svg";
 
-export default function Header() {
+export default function Header(props) {
   const location = useLocation();
-
   return (
     <header
       className={`header header_color_${
-        location.pathname === "/" ? "rose" : "white"
+        location.pathname === "/" ? "gray" : "white"
       }`}
     >
       <div className="header__container">
         <Link to="/" className="header__logo-link">
           <img className="header__logo" src={logo} alt="Логотип" />
         </Link>
-        {loggedIn && (
+        {props.isLoggedIn && (
           <>
             <div className="header__links">
               <Link className="header__link header__link_movies" to="/movies">
@@ -45,8 +44,8 @@ export default function Header() {
               </Link>
             </nav>
           </>
-        ) }
-        {!loggedIn && (
+         ) } 
+       {!props.isLoggedIn && ( 
           <>
             <div className="header__links-home">
               <Link className="header__link" to="/signup">
@@ -57,12 +56,13 @@ export default function Header() {
               </Link>
             </div>
           </>
-        )}
+       )}
       </div>
-      {loggedIn && (
+      {props.isLoggedIn && (
         <button
           className="header__burger-button"
           type="button"
+          onClick={props.openBurger}
         >
           <img className="header__burger" src={burger} alt="кнопка бургер" />
         </button>

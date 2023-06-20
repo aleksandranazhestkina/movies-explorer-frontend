@@ -87,7 +87,7 @@
   opacity: 0.6;
 }
 
-.burger__link_movies {
+.burger__link_active {
   border-bottom: 2px #000 solid;
   padding-bottom: 4px;
 }
@@ -98,7 +98,6 @@
   margin-bottom: 90px;
   width: 100px;
   height: 32px;
-  border-radius: 40px;
   background-color: #fff;
   display: flex;
   align-items: center;

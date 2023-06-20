@@ -6,9 +6,9 @@ export default function Promo() {
     <section className="promo">
       <div className="promo__container">
         <div className="promo__cover">
-          <h1 className="promo__title">
+          <h2 className="promo__title">
             Учебный проект студента факультета Веб-разработки.
-          </h1>
+          </h2>
           <img src={logo} alt="Логотип" className="promo__logo" />
         </div>
         <ul className="promo__links">
