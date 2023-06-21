@@ -2,7 +2,7 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
-import { EMAIL_PATTERN } from "../../utils/constants";
+// import { EMAIL_PATTERN } from "../../utils/constants";
 
 export default function Login(props) {
   const { values, handleChange, isValid, errors } =

@@ -29,12 +29,10 @@ export default function SavedMovies(props) {
 
   // Фильтрация фильмов
   useEffect(() => {
-    const moviesList = utils.filterMovies(props.savedMovies, keyword);
-    const shortMoviesList = (() => {
-      utils.filterShortMovies(moviesList, keyword)
-    })
+    const filtredMovies = utils.filterMovies(props.savedMovies, keyword);
+    const shortMoviesList = utils.filterShortMovies(filtredMovies, keyword);
     setFiltredSavedMovies(
-      moviesCheckbox ? shortMoviesList : moviesList
+      moviesCheckbox ? shortMoviesList : filtredMovies
     );
   }, [props.savedMovies, moviesCheckbox, keyword]);
 

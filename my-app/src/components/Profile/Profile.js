@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
 import CurrentUserContext from "../../context/CurrentUserContext";
 import Burger from "../Burger/Burger";
-import { EMAIL_PATTERN, USER_NAME_PATTERN } from "../../utils/constants";
+// import { EMAIL_PATTERN, USER_NAME_PATTERN } from "../../utils/constants";
 
 export default function Profile(props) {
   const { values, setValues, handleChange, isValid, errors, resetForm } =
@@ -59,7 +59,7 @@ export default function Profile(props) {
                 value={values.name || ""}
                 minLength="2"
                 maxLength="30"
-                pattern={USER_NAME_PATTERN}
+                // pattern={USER_NAME_PATTERN}
                 onChange={handleChange}
               />
             </p>
