@@ -23,8 +23,8 @@ export default function SearchForm(props) {
         props.getSavedMovies(searchValue);
       } else {
         props.getMovies(searchValue);
+        localStorage.setItem("search", searchValue);
       }
-      localStorage.setItem("search", searchValue);
     }
   }
 

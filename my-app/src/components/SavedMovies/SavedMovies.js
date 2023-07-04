@@ -42,7 +42,7 @@ export default function SavedMovies(props) {
       setIsErrorDisplaying(true);
       setNotFound(false);
     }
-    if (filtredSavedMovies.length === 0 && keyword.length >= 1) {
+    if (filtredSavedMovies.length === 0) {
       setNotFound(true);
       setIsErrorDisplaying(false);
     } else {
