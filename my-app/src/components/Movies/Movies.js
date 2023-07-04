@@ -26,6 +26,7 @@ export default function Movies(props) {
   const [moviesCheckbox, setMoviesCheckbox] = useState(false); // чекбокс
   const [notFound, setNotFound] = useState(false);
   const [isErrorDisplaying, setIsErrorDisplaying] = useState(false); //отображение ошибки
+  const [message, setMessage] = ("");
 
   // Отображение фильмов при нажатии на чекбокс
   function handleShortMovies() {
@@ -136,7 +137,7 @@ export default function Movies(props) {
   // Отображение информации на странице из локального хранилища
   useEffect(() => {
     if (localStorage.getItem("filterSearchedMovies") === null) {
-      setNotFound(true);
+      setNotFound(false);
     } else {
       if (
         JSON.parse(localStorage.getItem("filterSearchedMovies")).length === 0
