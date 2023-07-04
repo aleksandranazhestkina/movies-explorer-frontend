@@ -2,7 +2,7 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
-// import { EMAIL_PATTERN, USER_NAME_PATTERN } from "../../utils/constants";
+// import { USER_NAME_PATTERN } from "../../utils/constants";
 
 export default function Register(props) {
   const { values, handleChange, isValid, errors, resetForm } =
@@ -37,6 +37,7 @@ export default function Register(props) {
           minLength="2"
           maxLength="30"
           value={values.name || ""}
+          pattern="[a-zA-ZА-яёЁ\-\s]*"
           // pattern={USER_NAME_PATTERN}
           required
           onChange={handleChange}
@@ -51,7 +52,7 @@ export default function Register(props) {
           minLength="2"
           maxLength="40"
           value={values.email || ""}
-          // pattern={EMAIL_PATTERN}
+          pattern="^\S+@\S+\.\S+$"
           required
           onChange={handleChange}
         />

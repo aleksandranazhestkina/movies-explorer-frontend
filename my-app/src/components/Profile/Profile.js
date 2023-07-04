@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
 import CurrentUserContext from "../../context/CurrentUserContext";
 import Burger from "../Burger/Burger";
-// import { EMAIL_PATTERN, USER_NAME_PATTERN } from "../../utils/constants";
+// import {  USER_NAME_PATTERN } from "../../utils/constants";
 
 export default function Profile(props) {
   const { values, setValues, handleChange, isValid, errors, resetForm } =
@@ -30,7 +30,7 @@ export default function Profile(props) {
     resetForm(currentUser, {}, false);
   }
 
-  // Заолпнение инпутов
+  // Заполнение инпутов
   useEffect(() => {
     setValues(currentUser);
   }, [setValues, currentUser]);
@@ -70,7 +70,7 @@ export default function Profile(props) {
                 className="profile__input"
                 type="email"
                 value={values.email || ""}
-                // pattern={EMAIL_PATTERN}
+                pattern="^\S+@\S+\.\S+$"
                 required
                 onChange={handleChange}
               />

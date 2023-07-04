@@ -2,7 +2,7 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import { useFormWithValidation } from "../../hooks/useFormValidation";
-// import { EMAIL_PATTERN } from "../../utils/constants";
+//import { EMAIL_PATTERN } from "../../utils/constants";
 
 export default function Login(props) {
   const { values, handleChange, isValid, errors } =
@@ -10,7 +10,10 @@ export default function Login(props) {
 
   function handleLoginSubmit(e) {
     e.preventDefault();
-    props.onLogin(values.email, values.password);
+    if(isValid === true) {
+     props.onLogin(values.email, values.password); 
+    }
+    
   }
 
   return (
@@ -35,7 +38,7 @@ export default function Login(props) {
           minLength="2"
           maxLength="30"
           value={values.email || ""}
-          // pattern={EMAIL_PATTERN}
+          pattern="^\S+@\S+\.\S+$"
           required
           onChange={handleChange}
         />
