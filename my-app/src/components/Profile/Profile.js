@@ -23,6 +23,11 @@ export default function Profile(props) {
     setIsOpen(false);
   }
 
+  // Проверка инпутов для подтвержения изменений
+  const profileInputsDifferense = () => {
+    return (values.name !== currentUser.name || values.email !== currentUser.email)
+  }
+
   // Редактирование профиля
   function handleProfileSubmit(e) {
     e.preventDefault();
@@ -82,7 +87,7 @@ export default function Profile(props) {
             className={`profile__button profile__footer ${!isValid ? "profile__button_disabled" : ""
               }`}
             type="submit"
-            disabled={!isValid}
+            disabled={!profileInputsDifferense() || !isValid}
           >
             Редактировать
           </button>
