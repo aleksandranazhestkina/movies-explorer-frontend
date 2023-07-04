@@ -1,0 +1,128 @@
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #DDDEE3;
+}
+
+.promo__container {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+}
+
+.promo__cover {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin-top: 82px;
+}
+
+.promo__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #111111;
+  z-index: 1;
+  position: absolute;
+  max-width: 730px;
+}
+
+.promo__logo {
+  z-index: 0;
+  position: relative;
+  object-position: center;
+}
+
+.promo__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  min-height: 66px;
+  width: 100%;
+  background-color: #F5F5F5;
+  align-items: center;
+  padding: 0;
+  margin-top: 124px;
+  margin-bottom: 0;
+}
+
+.promo__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.23;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: #000;
+  padding-left: 40px;
+  cursor: pointer;
+  transform: opacity 0.4s;
+}
+
+.promo__link_project {
+  padding-left: 0;
+}
+
+.promo__link:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+.promo__cover{
+  margin: 224px 0 116px;
+}
+
+  .promo__title {
+    text-align: center;
+    max-width: 730px;
+  }
+
+  .promo__link {
+    padding-left: 40px;
+  }
+
+  .promo__link_project {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .promo__cover{
+    margin: 142px 0 56px;
+  }
+
+  .promo__logo {
+    max-width: 248px;
+  }
+
+  .promo__title {
+    font-size: 29px;
+    line-height: 1.27;
+    letter-spacing: -0.03em;
+    max-width: 300px;
+  }
+
+  .promo__link {
+    padding-left: 24px;
+  }
+
+  .promo__link_project {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__logo {
+    max-width: 248px;
+  }
+}
